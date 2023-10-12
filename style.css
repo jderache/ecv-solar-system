@@ -83,9 +83,37 @@ h1 {
 	box-shadow: 0 0 10px #66b2ff;
 	background: linear-gradient(to bottom right, #66b2ff, white);
 	opacity: 1;
-	margin: -15px 0;
+	margin-left: -140px;
 }
-
+.planet-3--moon {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #66b2ff;
+	border: 1px solid gray;
+	display: none;
+	opacity: 0.8;
+	animation: moon 3s linear infinite;
+}
+.orbit--planet3 {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-left: -26px;
+	display: block;
+	opacity: 0.8;
+	z-index: 100;
+	animation: orbit 1s linear infinite;
+	border: 1px solid rgba(173, 216, 230, 0.5);
+}
+.moon {
+	width: 6px;
+	height: 6px;
+	box-shadow: 0 0 5px white;
+	background: white;
+	border-radius: 50%;
+	display: block;
+}
 .planet-4 {
 	width: 10px;
 	height: 10px;
@@ -141,6 +169,7 @@ h1 {
 	transform-style: preserve-3d;
 	z-index: 100;
 	animation: orbit 0s linear infinite;
+	transition: all 2s ease-in-out;
 }
 .planet-content:nth-child(1) {
 	position: relative;
@@ -238,6 +267,7 @@ h1 {
 	position: absolute;
 	top: 0;
 	left: 0;
+	transition: all 2s ease-in-out;
 }
 
 .planet-container--1:hover,
@@ -265,6 +295,7 @@ h1 {
 	display: block;
 }
 .planet-description .sun,
+.planet-description .moon,
 .planet-description .planet-1,
 .planet-description .planet-2,
 .planet-description .planet-3,
@@ -283,6 +314,14 @@ h1 {
 	}
 	100% {
 		transform: rotate(360deg);
+	}
+}
+@keyframes moon {
+	0% {
+		transform: rotateX(60deg) rotateY(150deg) rotate(0);
+	}
+	100% {
+		transform: rotateX(60deg) rotateY(150deg) rotate(360deg);
 	}
 }
 footer a:visited,
