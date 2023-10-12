@@ -264,6 +264,18 @@ h1 {
 .planet-container--9:hover + .planet-description.planet--9 {
 	display: block;
 }
+.planet-description .sun,
+.planet-description .planet-1,
+.planet-description .planet-2,
+.planet-description .planet-3,
+.planet-description .planet-4,
+.planet-description .planet-5,
+.planet-description .planet-6,
+.planet-description .planet-7,
+.planet-description .planet-8 {
+	position: relative;
+	margin: 0 auto;
+}
 
 @keyframes orbit {
 	0% {
@@ -272,4 +284,16 @@ h1 {
 	100% {
 		transform: rotate(360deg);
 	}
+}
+footer a:visited,
+footer a {
+	color: inherit;
+}
+footer {
+	position: fixed;
+	color: white;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
